@@ -3,4 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    </resources>
+    <!-- nav drawer related dimens -->
+    <dimen name="drawer_divider_height">1dp</dimen>
+    <dimen name="drawer_width">240dp</dimen>
+
+</resources>

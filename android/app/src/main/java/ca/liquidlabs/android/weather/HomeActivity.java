@@ -1,5 +1,6 @@
 package ca.liquidlabs.android.weather;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 /**
@@ -17,7 +19,6 @@ import android.widget.ListView;
  *
  * @author Abdullah Rubiyath
  */
-
 public class HomeActivity extends Activity {
 
     /**
@@ -44,10 +45,11 @@ public class HomeActivity extends Activity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        // setup ActionBar and Navigation Drawer
+        setupActionBar();
         setupDrawer();
     }
+
 
 
     @Override
@@ -58,8 +60,9 @@ public class HomeActivity extends Activity {
         return true;
     }
 
+
     /**
-     * Sets up the Drawer's Toggle and List View
+     * Sets up the Drawer's Toggle and List View on Navigation Drawer
      */
     public void setupDrawer() {
 
@@ -87,6 +90,17 @@ public class HomeActivity extends Activity {
     }
 
 
+    /**
+     * Sets up the Actionbar
+     */
+    private void setupActionBar()
+    {
+        ActionBar actionBar  = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+
+    }
+
 
     /**
      * Initializes the ListView of Drawer
@@ -105,12 +119,27 @@ public class HomeActivity extends Activity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView parent, View view, int position, long id) {
-            mDrawerLayout.closeDrawer(mDrawerList);
+            selectItem(position);
         }
     }
 
+    /**
+     *  Selects an Item.
+     *  @param pos  The index/position where it was tapped.
+     */
+    private void selectItem(int pos)
+    {
+        Toast.makeText(this, "Tapped: " + pos, Toast.LENGTH_LONG).show();
+    }
 
 
+    /**
+     * ActionBar Menu/Item's Handler
+     *
+     * @param item
+     *
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Pass the event to ActionBarDrawerToggle, if it returns
