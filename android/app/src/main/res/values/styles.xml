@@ -5,4 +5,24 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="WrapHeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MatchBoth">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- replace the hardcoded dp width with a value from dimen -->
+    <style name="DrawerListView">
+        <item name="android:layout_width">@dimen/drawer_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:background">@color/drawer_item_bg</item>
+        <item name="android:dividerHeight">@dimen/drawer_divider_height</item>
+    </style>
+
 </resources>
