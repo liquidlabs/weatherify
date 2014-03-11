@@ -9,9 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ca.liquidlabs.android.weather.ui.DrawerItemAdapter;
 
 
 /**
@@ -104,7 +108,7 @@ public class HomeActivity extends Activity {
 
     /**
      * Initializes the ListView of Drawer
-     * @TODO: improve with a custom Adapter extending from BaseAdapter
+     * @TODO: improve with a actual Weather Data
      */
     private void initListView()
     {
@@ -112,7 +116,12 @@ public class HomeActivity extends Activity {
                 "Home", "Max", "Contact", "About"
         };
 
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, titles));
+        List<String> titlesList = new ArrayList<String>(titles.length);
+        for (String t: titles) {
+            titlesList.add(t);
+        }
+
+        mDrawerList.setAdapter(new DrawerItemAdapter(this, titlesList));
     }
 
 
