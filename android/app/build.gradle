@@ -19,7 +19,18 @@ android {
 }
 
 dependencies {
+    //
+    // Android core library dependencies
+    //
     compile 'com.android.support:support-v4:+'
+
+    //
+    // Additional jar lib dependencies
+    //
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    //
+    // Third party library dependencies
+    //
+    compile project(':volley')
 }
