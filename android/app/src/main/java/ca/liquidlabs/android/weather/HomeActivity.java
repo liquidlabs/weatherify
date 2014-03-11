@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ca.liquidlabs.android.weather.ui.DrawerItemAdapter;
+import ca.liquidlabs.android.weather.ui.ScreenSlidePagerAdapter;
 
 
 /**
@@ -54,16 +55,20 @@ public class HomeActivity extends FragmentActivity {
     private PagerAdapter mPagerAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        mPager = (ViewPager) findViewById(R.id.pager);
 
-        // setup ActionBar and Navigation Drawer
+        // setup ActionBar and Navigation Drawer, ViewPager
         setupActionBar();
         setupDrawer();
+        setupViewPager();
     }
 
 
@@ -114,7 +119,15 @@ public class HomeActivity extends FragmentActivity {
         ActionBar actionBar  = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
+    }
 
+
+    /**
+     * Sets up ViewPager
+     */
+    public void setupViewPager() {
+        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mPager.setAdapter(mPagerAdapter);
     }
 
 
