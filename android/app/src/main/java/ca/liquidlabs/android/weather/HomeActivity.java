@@ -4,6 +4,9 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +26,7 @@ import ca.liquidlabs.android.weather.ui.DrawerItemAdapter;
  *
  * @author Abdullah Rubiyath
  */
-public class HomeActivity extends Activity {
+public class HomeActivity extends FragmentActivity {
 
     /**
      * drawer layout
@@ -40,6 +43,15 @@ public class HomeActivity extends Activity {
      */
     private ListView mDrawerList;
 
+    /**
+     * The ViewPager
+     */
+    private ViewPager mPager;
+
+    /**
+     * PagerAdapter
+     */
+    private PagerAdapter mPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
