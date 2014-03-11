@@ -8,6 +8,10 @@
         android:id="@+id/content_frame"
         style="@style/MatchBoth" />
     -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        style="@style/MatchBoth"
+    />
 
     <!-- The navigation drawer -->
     <ListView android:id="@+id/left_drawer"
