@@ -12,7 +12,7 @@ import java.util.List;
 import ca.liquidlabs.android.weather.R;
 
 /**
- * An Adapter for the Item's in ListView of Nav Drawer
+ * An Adapter for the Item's Nav Drawer's ListView
  * @author Abdullah Rubiyath
  */
 public class DrawerItemAdapter extends BaseAdapter {
@@ -28,7 +28,8 @@ public class DrawerItemAdapter extends BaseAdapter {
 
     /**
      * Creates an Adapter with the List and a Context
-     * @param ctx
+     * @param ctx   The Application Context
+     * @param list  List of Weather Data
      */
     public DrawerItemAdapter(Context ctx, List<String> list) {
         items = list;
