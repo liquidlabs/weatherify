@@ -33,4 +33,5 @@ dependencies {
     // Third party library dependencies
     //
     compile project(':volley')
+    compile project(':AndroidSlidingUpPanel:library')
 }
