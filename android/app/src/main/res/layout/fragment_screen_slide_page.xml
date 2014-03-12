@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MatchBoth">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchBoth"
+    android:id="@+id/screen_slide_layout"
+    >
 
     <TextView
         style="@style/WrapContent"
         android:id="@+id/pager_counter"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal|center_vertical"
      />
-
-</RelativeLayout>
+    
+</FrameLayout>

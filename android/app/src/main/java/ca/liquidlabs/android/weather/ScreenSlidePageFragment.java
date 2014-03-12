@@ -44,6 +44,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
         Bundle b = getArguments();
 
+
         // put the string!
         TextView tView = (TextView) rootView.findViewById(R.id.pager_counter);
         tView.setText(b.getString(ARGS_COUNTER));
