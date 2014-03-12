@@ -1,3 +1,6 @@
 [submodule "android/volley"]
 	path = android/volley
 	url = https://android.googlesource.com/platform/frameworks/volley
+[submodule "android/AndroidSlidingUpPanel"]
+	path = android/AndroidSlidingUpPanel
+	url = https://github.com/umano/AndroidSlidingUpPanel
