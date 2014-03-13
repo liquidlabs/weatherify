@@ -2,11 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/MatchBoth">
 
-    <TextView
-        style="@style/WrapContent"
-        android:id="@+id/pager_counter"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-     />
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sliding_layout"
+        android:gravity="bottom">
+
+        <TextView
+            style="@style/WrapContent"
+            android:id="@+id/pager_counter"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+         />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+        >
+
+            <TextView
+                style="@style/WrapContent"
+                android:id="@+id/pager_details"
+                android:text="Hello World"
+             />
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 </RelativeLayout>
