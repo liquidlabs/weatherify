@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -54,6 +55,8 @@ public class HomeActivity extends FragmentActivity {
      */
     private PagerAdapter mPagerAdapter;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -69,6 +72,15 @@ public class HomeActivity extends FragmentActivity {
         setupActionBar();
         setupDrawer();
         setupViewPager();
+        setupGestureListeners();
+    }
+
+
+    /**
+     * Sets/Initializes the Gestures
+     */
+    private void setupGestureListeners() {
+
     }
 
 
